@@ -1,0 +1,16 @@
+Alem do metodo a seguir, a perspectiva pode ser configurada pela propria barra de menus do rqt tb.
+
+
+
+Primeiramente... $roscore.
+
+Pelo terminal va ate a pasta que se encontra o arquivo "sup_test.perspective" e digite o comando do rqt:
+
+$rqt --perspective-file sup_test.perspective
+
+Isso fara o rqt carregar uma interface predefinida no arquivo sup_test. Obs: pode haver problemas com o plugin que criamos, o "rqt_mypkg" pois ele tb ta incorporado na interface.
+
+Para visualizar dados, so rodar o rosbag em outro terminal.
+
+$rosbag play george-ros-2017-03-12-19-27-25.bag 
+
