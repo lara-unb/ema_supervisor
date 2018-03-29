@@ -5,7 +5,6 @@ import rospy
 from qt_gui.plugin import Plugin
 from python_qt_binding import loadUi
 from python_qt_binding.QtWidgets import QWidget
-from rqt_topic.topic_widget import TopicWidget
 
 class MyPlugin(Plugin):
 
@@ -33,7 +32,7 @@ class MyPlugin(Plugin):
         # in this example the .ui and .py file are in the same folder
         ui_file = os.path.join(rp.get_path('rqt_mypkg'), 'resource', 'MyPlugin.ui')
         # Extend the widget with all attributes and children from UI file
-        loadUi(ui_file, self._widget, {'TopicWidget': TopicWidget})
+        loadUi(ui_file, self._widget)
         # Give QObjects reasonable names
         self._widget.setObjectName('MyPluginUi')
         # Show _widget.windowTitle on left-top of each plugin (when 
