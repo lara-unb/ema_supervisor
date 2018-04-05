@@ -5,6 +5,7 @@ import rospy
 from qt_gui.plugin import Plugin
 from python_qt_binding import loadUi
 from python_qt_binding.QtWidgets import QWidget
+from rqt_topic.topic_widget import TopicWidget
 
 class MyPlugin(Plugin):
 
@@ -22,9 +23,9 @@ class MyPlugin(Plugin):
                       dest="quiet",
                       help="Put plugin in silent mode")
         args, unknowns = parser.parse_known_args(context.argv())
-        #if not args.quiet:
-        #    print 'arguments: ', args
-        #    print 'unknowns: ', unknowns
+        if not args.quiet:
+            print 'arguments: ', args
+            print 'unknowns: ', unknowns
 
         # Create QWidget
         self._widget = QWidget()
@@ -32,7 +33,7 @@ class MyPlugin(Plugin):
         # in this example the .ui and .py file are in the same folder
         ui_file = os.path.join(rp.get_path('rqt_mypkg'), 'resource', 'MyPlugin.ui')
         # Extend the widget with all attributes and children from UI file
-        loadUi(ui_file, self._widget)
+        loadUi(ui_file, self._widget, {'TopicWidget': TopicWidget})
         # Give QObjects reasonable names
         self._widget.setObjectName('MyPluginUi')
         # Show _widget.windowTitle on left-top of each plugin (when 

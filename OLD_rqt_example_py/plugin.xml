@@ -12,12 +12,7 @@
         <label>Subgroup</label>
       </group>
       -->
-      <group>
-       <label>Configuration</label>
-       <icon type="theme">folder</icon>
-       <statustip>Plugins related to configuration.</statustip>
-      </group>
-      <label>Supervisor</label>
+      <label>Supervisorio</label>
       <icon type="theme">system-help</icon>
       <statustip>Great user interface to provide real value.</statustip>
     </qtgui>
