@@ -1,0 +1,16 @@
+Alem do metodo a seguir, a perspectiva pode ser configurada pela propria barra de menus do rqt.
+
+
+
+Primeiramente... $roscore e etc.
+
+Em seguida, pelo terminal (cd), va ate a pasta que se encontra o arquivo "supervisor.perspective" e digite o comando do rqt:
+
+	rqt --perspective-file supervisor.perspective
+
+Isso fara o rqt carregar uma interface predefinida no arquivo supervisor.perspective. 
+
+Para visualizar dados, 'e so rodar o rosbag em outro terminal. Assim:
+
+	rosbag play george-ros-2017-03-12-19-27-25.bag 
+
